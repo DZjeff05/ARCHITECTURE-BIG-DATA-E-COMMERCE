@@ -1,0 +1,6 @@
+from app.security import create_access_token
+
+@app.post("/auth/login")
+def login(username: str, role: str = "reader"):
+    token = create_access_token(username, role)
+    return {"access_token": token, "token_type": "bearer"}

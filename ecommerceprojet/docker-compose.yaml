@@ -1,0 +1,92 @@
+version: "3.8"
+
+services:
+  spark-master:
+    image: apache/spark:3.4.2
+    container_name: spark-master
+    command: bash -c "/opt/spark/bin/spark-class org.apache.spark.deploy.master.Master"
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - ./jobs:/opt/spark/work-dir/jobs
+      - ./data:/opt/spark/work-dir/data
+      - ./logs:/opt/spark/work-dir/logs
+
+  spark-worker:
+    image: apache/spark:3.4.2
+    container_name: spark-worker
+    depends_on:
+      - spark-master
+    command: bash -c "/opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077"
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./jobs:/opt/spark/work-dir/jobs
+      - ./data:/opt/spark/work-dir/data
+      - ./logs:/opt/spark/work-dir/logs
+  postgres:
+    image: postgres:15
+    container_name: pg
+    environment:
+      POSTGRES_USER: dw_user
+      POSTGRES_PASSWORD: dw_pass
+      POSTGRES_DB: ecommerce_dw
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    environment:
+      - CLUSTER_NAME=demo
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    volumes:
+      - hdfs_namenode:/hadoop/dfs/name
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode
+    environment:
+      - CLUSTER_NAME=demo
+    depends_on:
+      - namenode
+    ports:
+      - "9864:9864"
+    volumes:
+      - hdfs_datanode:/hadoop/dfs/data
+
+  resourcemanager:
+    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
+    container_name: resourcemanager
+    depends_on:
+      - namenode
+      - datanode
+    ports:
+      - "8088:8088"
+
+  nodemanager:
+    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
+    container_name: nodemanager
+    depends_on:
+      - resourcemanager
+    ports:
+      - "8042:8042"
+
+  api:
+    build:
+      context: ./api
+    container_name: gold_api
+    env_file:
+      - ./api/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+ 
+volumes:
+  pg_data:
+  hdfs_namenode:
+  hdfs_datanode:
