@@ -1,0 +1,54 @@
+2026-02-09 18:18:53,919 - INFO - ===== START SILVER PROCESSOR =====
+2026-02-09 18:19:14,275 - INFO - Bronze loaded for 2026/2/9
+2026-02-09 18:20:17,688 - INFO - Wrote SILVER table dim_customers to hdfs://namenode:9000/data/silver/dim_customers
+2026-02-09 18:20:58,108 - INFO - Wrote SILVER table dim_products to hdfs://namenode:9000/data/silver/dim_products
+2026-02-09 18:22:07,636 - INFO - Wrote SILVER table dim_date to hdfs://namenode:9000/data/silver/dim_date
+2026-02-09 18:23:07,095 - INFO - Wrote SILVER table fact_orders to hdfs://namenode:9000/data/silver/fact_orders
+2026-02-09 18:25:22,278 - INFO - Wrote SILVER table fact_order_items to hdfs://namenode:9000/data/silver/fact_order_items
+2026-02-09 18:25:59,685 - INFO - Wrote SILVER table fact_reviews to hdfs://namenode:9000/data/silver/fact_reviews
+2026-02-09 18:25:59,690 - INFO - ===== SILVER PROCESSOR SUCCESS =====
+2026-02-09 19:14:03,680 - INFO - ===== START SILVER PROCESSOR =====
+2026-02-09 19:14:10,855 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/customers/year=2026/month=2/day=9
+2026-02-09 19:14:25,898 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/products/year=2026/month=2/day=9
+2026-02-09 19:14:26,353 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/orders/year=2026/month=2/day=9
+2026-02-09 19:14:26,809 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/order_items/year=2026/month=2/day=9
+2026-02-09 19:14:31,987 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/product_reviews/year=2026/month=2/day=9
+2026-02-09 19:15:22,290 - INFO - Wrote SILVER table dim_customers to hdfs://namenode:9000/data/silver/dim_customers
+2026-02-09 19:15:49,373 - INFO - Wrote SILVER table dim_products to hdfs://namenode:9000/data/silver/dim_products
+2026-02-09 19:16:52,562 - INFO - Wrote SILVER table dim_date to hdfs://namenode:9000/data/silver/dim_date
+2026-02-09 19:17:48,101 - INFO - Wrote SILVER table fact_orders to hdfs://namenode:9000/data/silver/fact_orders
+2026-02-09 19:20:05,314 - INFO - Wrote SILVER table fact_order_items to hdfs://namenode:9000/data/silver/fact_order_items
+2026-02-09 19:20:49,137 - INFO - Wrote SILVER table fact_reviews to hdfs://namenode:9000/data/silver/fact_reviews
+2026-02-09 19:20:49,164 - INFO - ===== SILVER PROCESSOR SUCCESS =====
+2026-02-09 19:20:50,200 - INFO - Spark stopped
+2026-02-09 19:20:50,201 - INFO - ===== END SILVER PROCESSOR =====
+2026-02-09 19:51:38,369 - INFO - ===== START SILVER PROCESSOR =====
+2026-02-09 19:51:45,181 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/customers/year=2026/month=2/day=9
+2026-02-09 19:51:57,187 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/products/year=2026/month=2/day=9
+2026-02-09 19:51:57,492 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/orders/year=2026/month=2/day=9
+2026-02-09 19:52:02,439 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/order_items/year=2026/month=2/day=9
+2026-02-09 19:52:02,835 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/product_reviews/year=2026/month=2/day=9
+2026-02-09 19:52:48,246 - INFO - Wrote SILVER table dim_customers to hdfs://namenode:9000/data/silver/dim_customers
+2026-02-09 19:53:17,199 - INFO - Wrote SILVER table dim_products to hdfs://namenode:9000/data/silver/dim_products
+2026-02-09 19:54:13,538 - INFO - Wrote SILVER table dim_date to hdfs://namenode:9000/data/silver/dim_date
+2026-02-09 19:55:13,498 - INFO - Wrote SILVER table fact_orders to hdfs://namenode:9000/data/silver/fact_orders
+2026-02-09 19:57:19,032 - INFO - Wrote SILVER table fact_order_items to hdfs://namenode:9000/data/silver/fact_order_items
+2026-02-09 19:57:51,136 - INFO - Wrote SILVER table fact_reviews to hdfs://namenode:9000/data/silver/fact_reviews
+2026-02-09 19:57:51,138 - INFO - ===== SILVER PROCESSOR SUCCESS =====
+2026-02-09 19:57:51,918 - INFO - Spark stopped
+2026-02-09 19:57:51,919 - INFO - ===== END SILVER PROCESSOR =====
+2026-02-11 18:18:45,171 - INFO - ===== START SILVER PROCESSOR =====
+2026-02-11 18:18:49,926 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/customers/year=2026/month=2/day=11
+2026-02-11 18:19:00,060 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/products/year=2026/month=2/day=11
+2026-02-11 18:19:02,711 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/orders/year=2026/month=2/day=11
+2026-02-11 18:19:03,002 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/order_items/year=2026/month=2/day=11
+2026-02-11 18:19:03,247 - INFO - Reading BRONZE path: hdfs://namenode:9000/data/raw/product_reviews/year=2026/month=2/day=11
+2026-02-11 18:19:38,464 - INFO - Wrote SILVER table dim_customers to hdfs://namenode:9000/data/silver/dim_customers
+2026-02-11 18:20:00,784 - INFO - Wrote SILVER table dim_products to hdfs://namenode:9000/data/silver/dim_products
+2026-02-11 18:20:43,859 - INFO - Wrote SILVER table dim_date to hdfs://namenode:9000/data/silver/dim_date
+2026-02-11 18:21:24,854 - INFO - Wrote SILVER table fact_orders to hdfs://namenode:9000/data/silver/fact_orders
+2026-02-11 18:23:00,859 - INFO - Wrote SILVER table fact_order_items to hdfs://namenode:9000/data/silver/fact_order_items
+2026-02-11 18:23:27,693 - INFO - Wrote SILVER table fact_reviews to hdfs://namenode:9000/data/silver/fact_reviews
+2026-02-11 18:23:27,698 - INFO - ===== SILVER PROCESSOR SUCCESS =====
+2026-02-11 18:23:28,513 - INFO - Spark stopped
+2026-02-11 18:23:28,513 - INFO - ===== END SILVER PROCESSOR =====
